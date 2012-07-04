@@ -1,0 +1,6 @@
+Usage: find_best_nfs_settings.py [options]
+
+Options:
+  -h, --help  show this help message and exit
+  --tcp       Enable test using tcp connections
+  --no_udp    Disable UDP connection testing
