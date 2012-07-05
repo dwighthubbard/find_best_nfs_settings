@@ -1,6 +1,22 @@
-Usage: find_best_nfs_settings.py [options]
+Description
+find_best_nfs_settings.py is used to optimize the nfs client mount settings on a Linux box. 
+
+What it does
+find_best_nfs_settings performs nfs mounts to the nfs server with different settings and measures read and write
+performance with each and returns the setting(s) that provided the best performance.  
+
+License
+find_best_nfs_settings is licensed under the GPL V2 or later.  Details can be found in the LICENSE file.
+
+Using find_best_nfs_settings.py:
+Usage: find_best_nfs_settings.py nfs_server:nfs_server_directory
 
 Options:
   -h, --help  show this help message and exit
   --tcp       Enable test using tcp connections
   --no_udp    Disable UDP connection testing
+
+Example Checking the best settings for nfs server named nfs.local directory /raid5/stuff
+:~/find_best_nfs_settings$ sudo ./findbest_nfs_settings.py nfs.local:/raid5/stuff
+[sudo] password for builduser:
+Testing UDP mount options, this will take several minutes
